@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1bb44871-d09e-4e3a-a8f9-ac2b004c0aed/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/troypappas",
+    "appService.deploySubpath": "."
+}

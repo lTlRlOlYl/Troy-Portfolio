@@ -1,0 +1,246 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+    <section class="home-hero">
+        <div class="home-hero__content">
+            <h1 class="heading-primary">Hey, my name is Troy Pappas</h1>
+            <div class="home-hero__info">
+                <p class="text-primary">
+                    A data analyst focused on using the latest technologies to automate, integrate and empower.
+                </p>
+            </div>
+            <div class="home-hero__cta">
+                <a href="{{ url_for('index', _anchor='projects') }}" class="btn btn--bg">Projects</a>
+            </div>
+        </div>
+        <div class="home-hero__socials">
+            <div class="home-hero__social">
+                <a href="" class="home-hero__social-icon-link">
+                    <img src="{{ url_for('static', filename='assets/png/linkedin-ico.png') }}"
+                         alt="icon"
+                         class="home-hero__social-icon" />
+                </a>
+            </div>
+            <div class="home-hero__social">
+                <a href="" class="home-hero__social-icon-link">
+                    <img src="{{ url_for('static', filename='assets/png/github-ico.png') }}"
+                         alt="icon"
+                         class="home-hero__social-icon" />
+                </a>
+            </div>
+            <div class="home-hero__social">
+                <a href="" class="home-hero__social-icon-link">
+                    <img src="{{ url_for('static', filename='assets/png/twitter-ico.png') }}"
+                         alt="icon"
+                         class="home-hero__social-icon" />
+                </a>
+            </div>
+            <div class="home-hero__social">
+                <a href="" class="home-hero__social-icon-link">
+                    <img src="{{ url_for('static', filename='assets/png/yt-ico.png') }}"
+                         alt="icon"
+                         class="home-hero__social-icon" />
+                </a>
+            </div>
+            <div class="home-hero__social">
+                <a href=""
+                   class="home-hero__social-icon-link home-hero__social-icon-link--bd-none">
+                    <img src="{{ url_for('static', filename='assets/png/insta-ico.png') }}"
+                         alt="icon"
+                         class="home-hero__social-icon" />
+                </a>
+            </div>
+        </div>
+        <div class="home-hero__mouse-scroll-cont">
+            <div class="mouse"></div>
+        </div>
+    </section>
+    <section id="about" class="about sec-pad">
+        <div class="main-container">
+            <h2 class="heading heading-sec heading-sec__mb-med">
+                <span class="heading-sec__main">About Me</span>
+                <span class="heading-sec__sub">
+                    Keep reading if you're interested in knowing more about me, what I do, and my current skills and tech stack.
+                </span>
+            </h2>
+            <div class="about__content">
+                <div class="about__content-main">
+                    <h3 class="about__content-title">Get to know me!</h3>
+                    <div class="about__content-details">
+                        <p class="about__content-details-para">
+                            Troy here. I'm a <strong>data analyst</strong> 
+                            and aspiring <strong>developer</strong> out of Boston, MA.
+                            I have a BS in math and econ, class of 2017. 
+                            Whether it's programming or analysis, I work mostly with Python and SQL.
+                            For the past three years I have been doing hands-on data design work using MS SQL Server and more recently, Azure.
+                        </p>
+                        <p class="about__content-details-para">
+                            I like to think outside the box.  
+                            I've spearheaded a number of initiatives to integrate and streamline analytics 
+                            at my current public-sector employer. 
+                            My interest lies in the end-to-end implementation of 
+                            web-based, data-driven solutions that are unique to the problems of the business.
+                            To that end, I've undertaken independent case studies in web development, AI, and more. 
+                            Oh, and I'm working on passing my 3rd actuarial exam in spring 2022.  
+                        </p>
+                        <p class="about__content-details-para">
+                            Download my <a rel="noreferrer" href="{{ url_for('resume_download') }}" target="_blank">resume</a> here.
+                            Hit contact below if you want to get in touch.
+                        </p>
+                    </div>
+                    <a href="{{ url_for('index', _anchor='contact') }}" class="btn btn--med btn--theme dynamicBgClr">Contact</a>
+                </div>
+                <div class="about__content-skills">
+                    <h3 class="about__content-title">My Skills</h3>
+                    <div class="skills">
+                        <div class="skills__skill">HTML</div>
+                        <div class="skills__skill">CSS</div>
+                        <div class="skills__skill">SASS</div>
+                        <div class="skills__skill">JavaScript</div>
+
+                        <div class="skills__skill">Python</div>
+                        <div class="skills__skill">Flask</div>
+
+                        <div class="skills__skill">SQL</div>
+                        <div class="skills__skill">T-SQL</div>
+                        <div class="skills__skill">Microsoft SQL Server</div>
+                        <div class="skills__skill">Integration Services</div>
+                        <div class="skills__skill">Analysis Services</div>
+                        <div class="skills__skill">Multidimensional Data Modeling</div>
+                        <div class="skills__skill">OLAP</div>
+                        <div class="skills__skill">Data Warehousing</div>
+
+                        <div class="skills__skill">Azure</div>
+
+                        <div class="skills__skill">Power BI</div>
+                        <div class="skills__skill">Tableau</div>
+
+                        <div class="skills__skill">GIT</div>
+                        <div class="skills__skill">Github</div>
+                        <div class="skills__skill">CMI</div>
+                        <div class="skills__skill">Powershell</div>
+
+                        <div class="skills__skill">Probablilty</div>
+                        <div class="skills__skill">Statistics</div>
+                        <div class="skills__skill">NLP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects sec-pad">
+        <div class="main-container">
+            <h2 class="heading heading-sec heading-sec__mb-bg">
+                <span class="heading-sec__main">Projects</span>
+                <span class="heading-sec__sub">
+                    More coming soon!
+                </span>
+            </h2>
+
+            <div class="projects__content">
+                <div class="projects__row">
+                    <div class="projects__row-img-cont">
+                        <img src="{{ url_for('static', filename='assets/jpeg/project-mockup-example.jpeg') }}"
+                             alt="Software Screenshot"
+                             class="projects__row-img"
+                             loading="lazy" />
+                    </div>
+                    <div class="projects__row-content">
+                        <h3 class="projects__row-content-title">Project 1</h3>
+                        <p class="projects__row-content-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                            facilis tempora, explicabo quae quod deserunt eius sapiente
+                            praesentium.
+                        </p>
+                        <a href="{{ url_for('project', name='proj1') }}"
+                           class="btn btn--med btn--theme dynamicBgClr"
+                           target="_blank">Case Study</a>
+                    </div>
+                </div>
+                <div class="projects__row">
+                    <div class="projects__row-img-cont">
+                        <img src="{{ url_for('static', filename='assets/jpeg/project-mockup-example.jpeg') }}"
+                             alt="Software Screenshot"
+                             class="projects__row-img"
+                             loading="lazy" />
+                    </div>
+                    <div class="projects__row-content">
+                        <h3 class="projects__row-content-title">Project 2</h3>
+                        <p class="projects__row-content-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                            facilis tempora, explicabo quae quod deserunt eius sapiente
+                            praesentium.
+                        </p>
+                        <a href="{{ url_for('project', name='proj2') }}"
+                           class="btn btn--med btn--theme dynamicBgClr"
+                           target="_blank">Case Study</a>
+                    </div>
+                </div>
+                <div class="projects__row">
+                    <div class="projects__row-img-cont">
+                        <img src="{{ url_for('static', filename='assets/jpeg/project-mockup-example.jpeg') }}"
+                             alt="Software Screenshot"
+                             class="projects__row-img"
+                             loading="lazy" />
+                    </div>
+                    <div class="projects__row-content">
+                        <h3 class="projects__row-content-title">Project 3</h3>
+                        <p class="projects__row-content-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                            facilis tempora, explicabo quae quod deserunt eius sapiente
+                            praesentium.
+                        </p>
+                        <a href="{{ url_for('project', name='proj3') }}"
+                           class="btn btn--med btn--theme dynamicBgClr"
+                           target="_blank">Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact sec-pad dynamicBg">
+        <div class="main-container">
+            <h2 class="heading heading-sec heading-sec__mb-med">
+                <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+                <span class="heading-sec__sub heading-sec__sub--lt">
+                    troy.pappas.dev@gmail.com | 774.955.7450 | <a href="{{ url_for('resume_download') }}">Resume</a>
+                </span>
+            </h2>
+            <!-- <div class="contact__form-container">
+                <form action="#" class="contact__form">
+                    <div class="contact__form-field">
+                        <label class="contact__form-label" for="name">Name</label>
+                        <input required
+                               placeholder="Enter Your Name"
+                               type="text"
+                               class="contact__form-input"
+                               name="name"
+                               id="name" />
+                    </div>
+                    <div class="contact__form-field">
+                        <label class="contact__form-label" for="email">Email</label>
+                        <input required
+                               placeholder="Enter Your Email"
+                               type="text"
+                               class="contact__form-input"
+                               name="email"
+                               id="email" />
+                    </div>
+                    <div class="contact__form-field">
+                        <label class="contact__form-label" for="message">Message</label>
+                        <textarea required
+                                  cols="30"
+                                  rows="10"
+                                  class="contact__form-input"
+                                  placeholder="Enter Your Message"
+                                  name="message"
+                                  id="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--theme contact__btn">
+                        Submit
+                    </button>
+                </form>
+            </div> -->
+        </div>
+    </section>
+    {% endblock %}
