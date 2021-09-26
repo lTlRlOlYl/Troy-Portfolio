@@ -8,7 +8,11 @@ app = Flask(__name__)
 def index():
     portfolio_project = ProjectPortfolio()
     map_project = ProjectMap()
-    return render_template('index.html', portfolio_project=portfolio_project, map_project=map_project)
+    return render_template(
+        'index.html', 
+        portfolio_project=portfolio_project, 
+        map_project=map_project
+        )
 
 @app.route('/project/<name>')
 def project(name):

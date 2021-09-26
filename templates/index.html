@@ -146,13 +146,9 @@
                              loading="lazy" />
                     </div>
                     <div class="projects__row-content">
-                        <h3 class="projects__row-content-title">Project 1</h3>
-                        <p class="projects__row-content-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                            facilis tempora, explicabo quae quod deserunt eius sapiente
-                            praesentium.
-                        </p>
-                        <a href="{{ url_for('project', name='proj1') }}"
+                        <h3 class="projects__row-content-title">{{ portfolio_project.title }}</h3>
+                        <p class="projects__row-content-desc">{{ portfolio_project.index_desc }}</p>
+                        <a href="{{ url_for('project', name='portfolio') }}"
                            class="btn btn--med btn--theme dynamicBgClr"
                            target="_blank">Case Study</a>
                     </div>
@@ -165,18 +161,14 @@
                              loading="lazy" />
                     </div>
                     <div class="projects__row-content">
-                        <h3 class="projects__row-content-title">Project 2</h3>
-                        <p class="projects__row-content-desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-                            facilis tempora, explicabo quae quod deserunt eius sapiente
-                            praesentium.
-                        </p>
-                        <a href="{{ url_for('project', name='proj2') }}"
+                        <h3 class="projects__row-content-title">{{ map_project.title }}</h3>
+                        <p class="projects__row-content-desc">{{ map_project.index_desc }}</p>
+                        <a href="{{ url_for('project', name='map') }}"
                            class="btn btn--med btn--theme dynamicBgClr"
                            target="_blank">Case Study</a>
                     </div>
                 </div>
-                <div class="projects__row">
+                <!-- <div class="projects__row">
                     <div class="projects__row-img-cont">
                         <img src="{{ url_for('static', filename='assets/jpeg/project-mockup-example.jpeg') }}"
                              alt="Software Screenshot"
@@ -194,7 +186,7 @@
                            class="btn btn--med btn--theme dynamicBgClr"
                            target="_blank">Case Study</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
