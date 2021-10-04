@@ -1,18 +1,26 @@
+from flask import url_for
+
 class ProjectPortfolio():
     title = "Portfolio"
     index_desc = "The project page for the site you're currently viewing."
     live_link = "https://troypappas.azurewebsites.net/"
     code_link = "https://github.com/lTlRlOlYl/Troy-Portfolio"
+    asset_url = '/static/assets/png/portfolio-mockup-2.png'
+#     intro_text = '''
+# A portfolio project based on the
+# <a href="https://dopefolio.netlify.app/">Dopefolio</a> template by
+# <a href="https://rammaheshwari.com">Ram Maheshwari</a>.
+# '''
     intro_text = '''
-A portfolio project based on the
-<a href="https://dopefolio.netlify.app/">Dopefolio</a> template by
-<a href="https://rammaheshwari.com">Ram Maheshwari</a>.
+A portfolio project based on the Dopefolio template by Ram Maheshwari.
 '''
-    primary_text = '''
+    primary_text = [
+'''
 This project is based off a template I came across on social media. 
 I chose to refactor the original code to be served by Flask, 
-and hosted it on Azure's app service.<br>
-'''
+and hosted it on Azure's app service.
+''',
+    ]
     tools_used = [
         "Python",
         "Flask",
@@ -23,22 +31,26 @@ and hosted it on Azure's app service.<br>
         "Azure"
     ]
 
+
 class ProjectMap():
     title = "Interactive Map"
     index_desc = "An interactive map of election costs in Massachusetts municipalities."
     live_link = "https://public.tableau.com/app/profile/troy.pappas/viz/ExampleVisualization/Sheet12"
     code_link = ""
+    asset_url = '/static/assets/png/map-mockup-2.png'
     intro_text = '''
 A map of historical election costs for the Commonwealth of Massachusetts, 
 with inbuilt functionality for switching between measures, adjusting the gradient, and more.
 '''
-    primary_text = '''
+    primary_text = [
+'''
 The data for this came as a table in excel, in an entity-attribute-value format 
-consisting of town, year, and amount. Publically available shapefiles were downloaded.
+consisting of town, year, and amount. Publicly available shapefiles were downloaded.
 Some SQL data manipulation was required. Windowing functions were used to facilite some of the 
 partitioned aggregates on the dashboard. 
 Parameters were leveraged in Tableau to implement the measure and gradient controls.
-'''
+''',
+    ]
     tools_used = [
         "Tableau",
         "T-SQL",
@@ -46,14 +58,19 @@ Parameters were leveraged in Tableau to implement the measure and gradient contr
         "Excel"
     ]
 
+
 class ProjectApp():
     title = "LoreGate"
     index_desc = "An independent proof-of-concept I came up with to guide me through learning the Flask framework."
     live_link = ""
     code_link = ""
     intro_text = ""
-    primary_text = ""
+    primary_text = [
+'''
+''',
+    ]
     tools_used = []
+
 
 class ProjectNLP():
     title = ""
@@ -61,7 +78,10 @@ class ProjectNLP():
     live_link = ""
     code_link = ""
     intro_text = ""
-    primary_text = ""
+    primary_text = [
+'''
+''',
+    ]
     tools_used = []
 
 
