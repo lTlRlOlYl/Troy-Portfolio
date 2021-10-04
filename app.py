@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, send_from_directory, abort, url_for
-from project_data import ProjectPortfolio, ProjectApp, ProjectMap, ProjectNLP
+from project_data import ProjectPortfolio, ProjectMap, ProjectAutomation
 
 app = Flask(__name__)
 
@@ -8,10 +8,12 @@ app = Flask(__name__)
 def index():
     portfolio_project = ProjectPortfolio()
     map_project = ProjectMap()
+    automation_project = ProjectAutomation()
     return render_template(
         'index.html',
         portfolio_project=portfolio_project,
         map_project=map_project,
+        automation_project=automation_project,
         )
 
 @app.route('/project/<name>')
@@ -22,6 +24,9 @@ def project(name):
     elif name == 'map':
         project_data = ProjectMap()
         return render_template('map_project.html', project_data=project_data)
+    elif name == 'automation':
+        project_data = ProjectAutomation()
+        return render_template('automation_project.html', project_data=project_data)
     return render_template('unavailable.html')
 
 @app.route("/resume_download")

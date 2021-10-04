@@ -168,6 +168,21 @@
                            target="_blank">Case Study</a>
                     </div>
                 </div>
+                <div class="projects__row">
+                    <div class="projects__row-img-cont">
+                        <img src="{{ url_for('static', filename='assets/jpeg/automation-mockup.jpg') }}"
+                                alt="Software Screenshot"
+                                class="projects__row-img"
+                                loading="lazy" />
+                    </div>
+                    <div class="projects__row-content">
+                        <h3 class="projects__row-content-title">{{ automation_project.title }}</h3>
+                        <p class="projects__row-content-desc">{{ automation_project.index_desc }}</p>
+                        <a href="{{ url_for('project', name='automation') }}"
+                            class="btn btn--med btn--theme dynamicBgClr"
+                            target="_blank">Case Study</a>
+                    </div>
+                </div>
                 <!-- <div class="projects__row">
                     <div class="projects__row-img-cont">
                         <img src="{{ url_for('static', filename='assets/jpeg/project-mockup-example.jpeg') }}"
