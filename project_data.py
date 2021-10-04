@@ -5,7 +5,7 @@ class ProjectPortfolio():
     index_desc = "The project page for the site you're currently viewing."
     live_link = "https://troypappas.azurewebsites.net/"
     code_link = "https://github.com/lTlRlOlYl/Troy-Portfolio"
-    asset_url = '/static/assets/png/portfolio-mockup-2.png'
+    asset_url = './static/assets/png/portfolio-mockup-2.png'
 #     intro_text = '''
 # A portfolio project based on the
 # <a href="https://dopefolio.netlify.app/">Dopefolio</a> template by
@@ -37,7 +37,7 @@ class ProjectMap():
     index_desc = "An interactive map of election costs in Massachusetts municipalities."
     live_link = "https://public.tableau.com/app/profile/troy.pappas/viz/ExampleVisualization/Sheet12"
     code_link = ""
-    asset_url = '/static/assets/png/map-mockup-2.png'
+    asset_url = './static/assets/png/map-mockup-2.png'
     intro_text = '''
 A map of historical election costs for the Commonwealth of Massachusetts, 
 with inbuilt functionality for switching between measures, adjusting the gradient, and more.

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">{{ project_data.title }}</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            A portfolio project based on the
+            <a href="https://dopefolio.netlify.app/">Dopefolio</a> template by
+            <a href="https://rammaheshwari.com">Ram Maheshwari</a>.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="{{ project_data.live_link }}" class="btn btn--bg" target="_blank">Live Link</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="{{ url_for('static', filename='assets/png/portfolio-mockup-2.png') }}"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              {% for p in project_data.primary_text %}
+              <p class="project-details__desc-para">{{ p }}</p>
+              {% endfor %}
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                {% for tool in project_data.tools_used %}
+                <div class="skills__skill">{{ tool }}</div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="{{ project_data.live_link }}"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="{{ project_data.code_link }}"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
